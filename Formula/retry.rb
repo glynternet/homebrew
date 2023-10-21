@@ -5,21 +5,21 @@
 class Retry < Formula
   desc "The command for retrying commands"
   homepage "https://github.com/glynternet/retry"
-  version "0.7.0-rc1"
+  version "0.7.0-rc2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/glynternet/retry/releases/download/0.7.0-rc1/retry_0.7.0-rc1_darwin_arm64.tar.gz"
-      sha256 "d3d068eb0f91f0f2f70d7852c822ec8d8fde475316656954c599b8a9219cd699"
+    if Hardware::CPU.intel?
+      url "https://github.com/glynternet/retry/releases/download/0.7.0-rc2/retry_0.7.0-rc2_darwin_amd64.tar.gz"
+      sha256 "e1be99b7bdaed6016146b1fdab17f9cc7345758278d5408556bba7172a278991"
 
       def install
         bin.install "retry"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/glynternet/retry/releases/download/0.7.0-rc1/retry_0.7.0-rc1_darwin_amd64.tar.gz"
-      sha256 "6a6139353e9db3ba6daa34500e03b7d672aa7c584f07cd94f4148506005dd519"
+    if Hardware::CPU.arm?
+      url "https://github.com/glynternet/retry/releases/download/0.7.0-rc2/retry_0.7.0-rc2_darwin_arm64.tar.gz"
+      sha256 "261f1815c0752f860f0832b04764f012d888c2a937db948a6d1edbdf641e2f87"
 
       def install
         bin.install "retry"
@@ -29,16 +29,16 @@ class Retry < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/glynternet/retry/releases/download/0.7.0-rc1/retry_0.7.0-rc1_linux_arm64.tar.gz"
-      sha256 "a4801eba49a3ed878e5a3e55a8d7afaf69978113807229f6d39544bb89a6aede"
+      url "https://github.com/glynternet/retry/releases/download/0.7.0-rc2/retry_0.7.0-rc2_linux_arm64.tar.gz"
+      sha256 "762503d743ce3b8e59b2746c765be2f2d3ab185e0b32b59deaff872dab3c7ed1"
 
       def install
         bin.install "retry"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/glynternet/retry/releases/download/0.7.0-rc1/retry_0.7.0-rc1_linux_amd64.tar.gz"
-      sha256 "e12e68be04b3ffdde8508d7a08897199944c74a2ca8d62c0f53a3f33b007c4a6"
+      url "https://github.com/glynternet/retry/releases/download/0.7.0-rc2/retry_0.7.0-rc2_linux_amd64.tar.gz"
+      sha256 "7c2c719df1e003788a957dd0d5b15567ae206d5d11697ba9492b8724039ca928"
 
       def install
         bin.install "retry"

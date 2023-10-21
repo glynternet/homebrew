@@ -5,21 +5,21 @@
 class Retry < Formula
   desc "The command for retrying commands"
   homepage "https://github.com/glynternet/retry"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/glynternet/retry/releases/download/0.5.0/retry_0.5.0_darwin_amd64.tar.gz"
-      sha256 "be406e3d8e8ca104862fdcf806763a0452ae91342fbefe5a988a0f370d7c33bb"
+      url "https://github.com/glynternet/retry/releases/download/0.6.0/retry_0.6.0_darwin_amd64.tar.gz"
+      sha256 "a90a7fec03cf8e1caa149eccbb4abe17cdb6ae54737eca8c2e52e74e5a7c00db"
 
       def install
         bin.install "retry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/glynternet/retry/releases/download/0.5.0/retry_0.5.0_darwin_arm64.tar.gz"
-      sha256 "270befee347ecdc97077fdd1d117d37f7124d4c64040d960e15ae16c951f1612"
+      url "https://github.com/glynternet/retry/releases/download/0.6.0/retry_0.6.0_darwin_arm64.tar.gz"
+      sha256 "31024939cfd9d156e6147903b037c34797b8818b7d295b06c30491c8b05a3616"
 
       def install
         bin.install "retry"
@@ -29,16 +29,16 @@ class Retry < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/glynternet/retry/releases/download/0.5.0/retry_0.5.0_linux_arm64.tar.gz"
-      sha256 "f7b26a916cca0cf50e05d4dc1f354ffabd158d4c41b1ca18c2d7225f9841d1ea"
+      url "https://github.com/glynternet/retry/releases/download/0.6.0/retry_0.6.0_linux_arm64.tar.gz"
+      sha256 "a135c1d273323540090977728f8021779a4af3acf1a6b64ac6fb8f4a7df961ca"
 
       def install
         bin.install "retry"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/glynternet/retry/releases/download/0.5.0/retry_0.5.0_linux_amd64.tar.gz"
-      sha256 "cdc37783a956444af6561e2c5fc2a6a301bcd6d9add5cd4fc47a508dff3c6676"
+      url "https://github.com/glynternet/retry/releases/download/0.6.0/retry_0.6.0_linux_amd64.tar.gz"
+      sha256 "547ca4baf64f2740e3e67ee9c69279d82a82794d9c2457cb1cc7fb696db5009c"
 
       def install
         bin.install "retry"

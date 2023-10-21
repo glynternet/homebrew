@@ -5,21 +5,21 @@
 class Retry < Formula
   desc "The command for retrying commands"
   homepage "https://github.com/glynternet/retry"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/glynternet/retry/releases/download/0.4.0/retry_0.4.0_darwin_arm64.tar.gz"
-      sha256 "fa9cb0848887694ce3a12f48aaccd33432c0d247a0d1cfb95de95f94aa70cc44"
+    if Hardware::CPU.intel?
+      url "https://github.com/glynternet/retry/releases/download/0.5.0/retry_0.5.0_darwin_amd64.tar.gz"
+      sha256 "be406e3d8e8ca104862fdcf806763a0452ae91342fbefe5a988a0f370d7c33bb"
 
       def install
         bin.install "retry"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/glynternet/retry/releases/download/0.4.0/retry_0.4.0_darwin_amd64.tar.gz"
-      sha256 "abf46e2e28b5fe3872d074eb1d3e53a797b2cdab6f09467928f599fed56fc446"
+    if Hardware::CPU.arm?
+      url "https://github.com/glynternet/retry/releases/download/0.5.0/retry_0.5.0_darwin_arm64.tar.gz"
+      sha256 "270befee347ecdc97077fdd1d117d37f7124d4c64040d960e15ae16c951f1612"
 
       def install
         bin.install "retry"
@@ -28,17 +28,17 @@ class Retry < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/glynternet/retry/releases/download/0.4.0/retry_0.4.0_linux_amd64.tar.gz"
-      sha256 "39a2e89c21fc864ce4e85e3de889364196091d73bb83cc7cff2f0da266576da8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/glynternet/retry/releases/download/0.5.0/retry_0.5.0_linux_arm64.tar.gz"
+      sha256 "f7b26a916cca0cf50e05d4dc1f354ffabd158d4c41b1ca18c2d7225f9841d1ea"
 
       def install
         bin.install "retry"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/glynternet/retry/releases/download/0.4.0/retry_0.4.0_linux_arm64.tar.gz"
-      sha256 "dc8c61b9b8c4d99e15d05619c2d079aeb84faf3c1488ae7ce8bec2349d84ea7f"
+    if Hardware::CPU.intel?
+      url "https://github.com/glynternet/retry/releases/download/0.5.0/retry_0.5.0_linux_amd64.tar.gz"
+      sha256 "cdc37783a956444af6561e2c5fc2a6a301bcd6d9add5cd4fc47a508dff3c6676"
 
       def install
         bin.install "retry"

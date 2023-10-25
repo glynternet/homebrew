@@ -5,21 +5,21 @@
 class Retry < Formula
   desc "The command for retrying commands"
   homepage "https://github.com/glynternet/retry"
-  version "0.11.0-rc3"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/glynternet/retry/releases/download/0.11.0-rc3/retry_0.11.0-rc3_darwin_arm64.tar.gz"
-      sha256 "863ea55df0bc8ae912592cf9a2e3b8ed08c0f477ae1fc7bc9e669505fa46a09f"
+      url "https://github.com/glynternet/retry/releases/download/v0.11.0/retry_0.11.0_darwin_arm64.tar.gz"
+      sha256 "e72874a1871c357544d090213b66f6cfc3af9707f6c6b0feb0ffe7e64ab56863"
 
       def install
         bin.install "retry"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/glynternet/retry/releases/download/0.11.0-rc3/retry_0.11.0-rc3_darwin_amd64.tar.gz"
-      sha256 "18576ad9811e274385a1faf10a434ef1f31aceab1c88f1d8f52359ec95541573"
+      url "https://github.com/glynternet/retry/releases/download/v0.11.0/retry_0.11.0_darwin_amd64.tar.gz"
+      sha256 "367504f5717f45b8e45f4ffce4cbabe0cf84585225bbebca4b60d725b133d492"
 
       def install
         bin.install "retry"
@@ -29,16 +29,16 @@ class Retry < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/glynternet/retry/releases/download/0.11.0-rc3/retry_0.11.0-rc3_linux_arm64.tar.gz"
-      sha256 "47fde0aa9db7b373ceba1fef3106f41eaad55ac2efaf07fe138a015a38bb61f8"
+      url "https://github.com/glynternet/retry/releases/download/v0.11.0/retry_0.11.0_linux_arm64.tar.gz"
+      sha256 "48a139f79f2e9e5f167d3ad8707c2a09865c2246fc8b117c74fe0952318a55b6"
 
       def install
         bin.install "retry"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/glynternet/retry/releases/download/0.11.0-rc3/retry_0.11.0-rc3_linux_amd64.tar.gz"
-      sha256 "1673208172a9d2d51a7eef2ab030b073a352d30d19fddc98ec36f11e0298cb2a"
+      url "https://github.com/glynternet/retry/releases/download/v0.11.0/retry_0.11.0_linux_amd64.tar.gz"
+      sha256 "6b1a04497067c4cf5c9931dc363b50ba9f9b45de11160be5e59d5c35cb639bfc"
 
       def install
         bin.install "retry"
